@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Main heading styles */
+body > h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+body > h2 {
+    text-align: center;
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Student card styles */
+.product {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    transition: transform 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* Title styles within cards */
+.title {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Student name (first title in each card) */
+.product .title:first-child {
+    font-size: 1.5rem;
+    color: #2196F3;
+    border-bottom: 2px solid #2196F3;
+    margin-bottom: 15px;
+}
+
+/* Status messages */
+.product h1:not(.title) {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Status colors */
+.product h1:contains("Excellent Student") {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.product h1:contains("Needs Tracking") {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.product h1:contains("New Student") {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Grade emojis and text */
+.product h1:contains("ممتاز") {
+    color: #2e7d32;
+}
+
+.product h1:contains("جيد") {
+    color: #1565c0;
+}
+
+.product h1:contains("مقبول") {
+    color: #f57c00;
+}
+
+.product h1:contains("ضعيف"),
+.product h1:contains("تحت المتوسط") {
+    color: #c62828;
+}
+
+/* Responsive grid layout */
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    body > h1,
+    body > h2 {
+        grid-column: 1 / -1;
+    }
+
+    .product {
+        margin: 0;
+    }
+}
+
+/* Custom styles for specific information */
+.title:contains("Score") {
+    font-weight: bold;
+}
+
+.title:contains("Score: 90"),
+.title:contains("Score: 91"),
+.title:contains("Score: 92"),
+.title:contains("Score: 93"),
+.title:contains("Score: 94"),
+.title:contains("Score: 95"),
+.title:contains("Score: 96"),
+.title:contains("Score: 97"),
+.title:contains("Score: 98"),
+.title:contains("Score: 99"),
+.title:contains("Score: 100") {
+    color: #2e7d32;
+}
+
+.title:contains("Absences: 0") {
+    color: #2e7d32;
+}
+
+.title:contains("Absences: 3"),
+.title:contains("Absences: 4"),
+.title:contains("Absences: 5") {
+    color: #c62828;
+}
