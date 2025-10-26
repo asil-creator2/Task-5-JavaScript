@@ -27,7 +27,7 @@ body > h2 {
 }
 
 /* Student card styles */
-.product {
+.student {
     background: white;
     border-radius: 10px;
     padding: 20px;
@@ -37,7 +37,7 @@ body > h2 {
     transition: transform 0.2s ease;
 }
 
-.product:hover {
+.student:hover {
     transform: translateY(-5px);
 }
 
@@ -51,7 +51,7 @@ body > h2 {
 }
 
 /* Student name (first title in each card) */
-.product .title:first-child {
+.student .title:first-child {
     font-size: 1.5rem;
     color: #2196F3;
     border-bottom: 2px solid #2196F3;
@@ -59,7 +59,7 @@ body > h2 {
 }
 
 /* Status messages */
-.product h1:not(.title) {
+.student h1:not(.title) {
     margin-top: 15px;
     padding: 10px;
     border-radius: 5px;
@@ -68,36 +68,36 @@ body > h2 {
 }
 
 /* Status colors */
-.product h1:contains("Excellent Student") {
+.student h1:contains("Excellent Student") {
     background-color: #e8f5e9;
     color: #2e7d32;
 }
 
-.product h1:contains("Needs Tracking") {
+.student h1:contains("Needs Tracking") {
     background-color: #ffebee;
     color: #c62828;
 }
 
-.product h1:contains("New Student") {
+.student h1:contains("New Student") {
     background-color: #e3f2fd;
     color: #1565c0;
 }
 
 /* Grade emojis and text */
-.product h1:contains("ممتاز") {
+.student h1:contains("ممتاز") {
     color: #2e7d32;
 }
 
-.product h1:contains("جيد") {
+.student h1:contains("جيد") {
     color: #1565c0;
 }
 
-.product h1:contains("مقبول") {
+.student h1:contains("مقبول") {
     color: #f57c00;
 }
 
-.product h1:contains("ضعيف"),
-.product h1:contains("تحت المتوسط") {
+.student h1:contains("ضعيف"),
+.student h1:contains("تحت المتوسط") {
     color: #c62828;
 }
 
@@ -115,7 +115,7 @@ body > h2 {
         grid-column: 1 / -1;
     }
 
-    .product {
+    .student {
         margin: 0;
     }
 }

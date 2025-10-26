@@ -100,7 +100,7 @@ document.write(`
   `)
 for (const student of students){
   document.write(`
-    <div class = "product">
+    <div class = "student">
       <h1 class = "title">${student.name}</h1>
       <h1 class = "title">Age : ${student.age}</h1>
       <h1 class = "title">Grade : ${student.grade}</h1>
@@ -111,7 +111,7 @@ for (const student of students){
       <h1 class = "title">Score : ${student.score}</h1>
     
     `)
-  if (student.isPresent == true && student.score >= 90){
+  if (student.isPresent && student.score >= 90){
     document.write("<h1>Excellent Student 🏅</h1>")
   }
   else if (student.absences > 3 || student.score < 50 ){
