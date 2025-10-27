@@ -78,8 +78,9 @@ let suceeded = 0;
 let unpresent = 0;
 
 let index = 0;
-let status = true;
+let status = true
 
+//while loop to count number suceeded students and the unpresent students
 while (status){
   if (students[index].score >= 90){
     suceeded ++
@@ -93,11 +94,16 @@ while (status){
   }
 }
 
+// print the amount of suceeded and unpresent students
 document.write(`
   <h1>Students</h1>
-  <h2>الغائبين : ${unpresent}</h2>
-  <h2>المتفوقون : ${suceeded}</h2>
+  <div class="head-section">
+    <h2 class="absences">الغائبين : ${unpresent}</h2>
+    <h2 class="successed">المتفوقون : ${suceeded}</h2>
+  </div>
   `)
+
+// loop to access each student
 for (const student of students){
   document.write(`
     <div class = "student">
@@ -111,15 +117,18 @@ for (const student of students){
       <h1 class = "title">Score : ${student.score}</h1>
     
     `)
+  // if student ispresent and score mpre than 90 
   if (student.isPresent && student.score >= 90){
     document.write("<h1>Excellent Student 🏅</h1>")
   }
+  // else if student absences more than 3 or score less than 50
   else if (student.absences > 3 || student.score < 50 ){
     document.write("<h1>Needs Tracking ⚠️</h1>")
   }
   else{
     document.write("<h1>New Student 🆕</h1>")
   }
+  // شروط على حسب الدرجه(grade) 
   switch (student.grade){
     case "A+":
       document.write("<h1>ممتاز جدا جدا 🎉</h1>")

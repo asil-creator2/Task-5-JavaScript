@@ -119,6 +119,96 @@ body > h2 {
         margin: 0;
     }
 }
+.successed {
+    background-color: #07460a;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+/* Badges for the top stats area */
+.successed {
+    display: inline-block;
+    background-color: #e8f5e9; /* light green */
+    color: #1b5e20; /* dark green */
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(27,94,32,0.08);
+}
+
+.absences {
+    display: inline-block;
+    background-color: #ffebee; /* light red */
+    color: #b71c1c; /* dark red */
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(183,28,28,0.08);
+}
+
+/* header container: center the two badges */
+.head-section {
+    display: grid;
+    grid-template-columns: auto auto; /* two columns sized to content */
+    gap: 10px; /* small gap between badges */
+    align-items: center;
+    justify-content: center; /* center the two columns in the header */
+    /* make the header stretch full width of the page (inside body padding)
+       by offsetting the body's 20px padding on each side */
+    width: calc(100% + 40px);
+    margin: 12px -20px 16px -20px;
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    font-weight: 700;
+}
+
+/* When the body becomes a grid on wider screens, make the header span the full row
+   so it appears under the main title and above the student cards. */
+.head-section {
+    grid-column: 1 / -1;
+}
+
+.head-section h2 { /* ensure no extra spacing from global body > h2 */
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.head-section .absences,
+.head-section .successed {
+    justify-self: center; /* center within their grid column */
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.head-section .absences {
+    background-color: #fff0f0;
+    color: #b71c1c;
+    box-shadow: 0 2px 6px rgba(183,28,28,0.06);
+}
+
+.head-section .successed {
+    background-color: #c8e6c9; /* pleasant green */
+    color: #1b5e20;
+    box-shadow: 0 2px 6px rgba(27,94,32,0.06);
+    margin-left: 550px;
+}
+
+/* On small screens stack the badges with a small gap */
+@media (max-width: 520px) {
+    .head-section {
+        grid-template-columns: 1fr;
+        padding-bottom: 12px;
+    }
+    .head-section .absences,
+    .head-section .successed {
+        justify-self: center;
+        display: inline-block;
+        margin-top: 6px;
+    }
+}
 
 /* Custom styles for specific information */
 .title:contains("Score") {
