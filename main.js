@@ -91,7 +91,6 @@ while (index < students.length){
 
 }
 
-console.log(students.length)
 // print the amount of suceeded and unpresent students
 document.write(`
   <h1>Students</h1>
