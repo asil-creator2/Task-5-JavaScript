@@ -78,10 +78,9 @@ let suceeded = 0;
 let unpresent = 0;
 
 let index = 0;
-let status = true
 
 //while loop to count number suceeded students and the unpresent students
-while (status){
+while (index < students.length){
   if (students[index].score >= 90){
     suceeded ++
   }
@@ -89,11 +88,10 @@ while (status){
     unpresent ++
   }
   index ++
-  if (index == students.length){
-    status = false
-  }
+
 }
 
+console.log(students.length)
 // print the amount of suceeded and unpresent students
 document.write(`
   <h1>Students</h1>
